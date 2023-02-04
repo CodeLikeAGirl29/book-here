@@ -69,7 +69,7 @@ export const AppointmentForm = ({
         />
       </label>
       <br />
-      <input type="submit" value="Add Appointment" />
+      <input className="btn" type="submit" value="Add Appointment" />
     </form>
   );
 };

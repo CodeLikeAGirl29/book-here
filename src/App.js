@@ -39,6 +39,8 @@ function App() {
   return (
     <>
       <nav>
+        <h1 className="gradient">Book Here</h1>
+        <p>A fun scheduling site - made with <span>React</span></p>
         <NavLink to={ROUTES.CONTACTS} activeClassName="active">
           Contacts
         </NavLink>

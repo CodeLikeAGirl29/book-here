@@ -10,6 +10,7 @@ nav > a {
   color: #000000;
   margin-right: 30.5px;
   text-decoration-line: none;
+  text-align: center;
 }
 
 nav > a.active {
@@ -21,15 +22,34 @@ nav > a:hover {
 }
 
 nav {
-  padding-bottom: 20px;
-  border-bottom: 1px solid #4285f4;
-  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #293945;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+nav p {
+  font-family: 'Raleway', sans-serif;
+}
+
+nav span {
+  font-weight: 200;
+}
+
+.gradient {
+  background-color: #f3ec78;
+  background-image: linear-gradient(90deg, #f3ec78 0%, #af4261 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
 }
 
 h2 {
   font-weight: bold;
   font-size: 1.5rem;
-  color: #4285f4;
+  color: #af4261;
   margin: 0;
   margin-bottom: 18px;
 }
@@ -41,16 +61,24 @@ section {
     border-radius: 5px; /* 5px rounded corners */
     padding: 10px;
     margin-top: 1.1em;
+    width: 700px;
 }
 
 hr {
   border: none;
-  border-top: 1px solid #979797;
   margin: 20px 0;
+  border-bottom: 1px solid #293945;
+	border-left: none;
+	border-right: none;
+	width: 50%;
 }
 
-input[type="submit"] {
-  background: #03a8d8;
+form {
+  align-items: center;
+}
+
+button {
+  background: #af4261;
   border-radius: 4px;
   color: #ffffff;
   font-weight: bold;
@@ -58,7 +86,7 @@ input[type="submit"] {
   border: none;
   outline: none;
   padding: 10px 0;
-  width: 100%;
+  width: 60%;
   font-family: "Open Sans", sans-serif;
   margin-top: 10px;
   margin-bottom: 0px;
@@ -67,19 +95,93 @@ input[type="submit"] {
 input,
 select {
   font-family: "Open Sans", sans-serif;
-  background: #ffffff;
+  background-color: #ffffff;
   border: 1px solid #979797;
   border-radius: 4px;
   padding: 7px 9.5px 9px 9.5px;
   outline: none;
-  width: 100%;
+  width: 60%;
   margin-bottom: 10px;
   box-sizing: border-box;
 }
 
+input:focus,
+select:focus {
+  background-color: #eff0f1;
+	outline: none;
+	border-bottom: 2px solid rgb(173, 35, 60);
+	transition: border-bottom 0.5s 1s, background-color 1s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+textarea:focus,
+select:focus {
+	background-color: #eff0f1;
+	outline: none;
+	border-bottom: 2px solid rgb(173, 35, 60);
+	transition: border-bottom 0.5s 1s, background-color 1s;
+}
+
+.btn {
+  padding: .75rem 1.25rem;
+  border-radius: 10rem;
+  color: rgb(173, 35, 60);
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: .10rem;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(255,255,255,0.1);
+  transition: all 0.3s;
+}
+
+.btn:hover::before {
+  opacity: 0 ;
+  transform: scale(0.5,0.5);
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border: 1px solid rgba(255,255,255,0.5);
+  transform: scale(1.2,1.2);
+}
+.btn:hover::after {
+  opacity: 1;
+  transform: scale(1,1);
+}
+
 .tile {
   margin: 0;
-  font-size: 14px;
+  font-size: 0.75rem;
   margin-bottom: 4px;
 }
 
@@ -88,5 +190,5 @@ select {
 }
 
 .tile-container {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
